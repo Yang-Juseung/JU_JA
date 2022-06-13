@@ -47,7 +47,7 @@ void Engine::Update()
 		input.Update();
 		window.Update();
 		frameCount++;
-		// if it's larger than Engine::FPS_IntervalFrameCount
+		
 		if (frameCount > FPS_IntervalFrameCount)
 		{
 			//std::chrono::duration<double>(now - fpsCalcTime).count();

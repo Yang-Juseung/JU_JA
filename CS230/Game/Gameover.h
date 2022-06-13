@@ -11,36 +11,21 @@ Creation date: 6/13/2022
 #pragma once
 #include "..\Engine\GameState.h"
 #include "..\Engine\Input.h"
-#include "Player.h"
-#include "..\Engine\Camera.h"
+#include "Hero.h"
 #include "Background.h"
 
-namespace CS230
-{
-	class Camera;
-}
-
-class Mode3 : public CS230::GameState {
+class Game_end : public CS230::GameState {
 public:
-	static constexpr double floor = 126.0f;
-
-	Mode3();
+	Game_end();
 	void Load() override;
 	void Update(double dt) override;
 	void Unload() override;
 	void Draw() override;
 
 	std::string GetName() override { return "Mode 3"; }
-
-	static constexpr double gravity = 2000;
-
 private:
-	CS230::InputKey modeNext;
-
-	CS230::InputKey modeReload;
-
-	Player* player;
-
-	CS230::Camera camera;
 	Background background;
+	Hero* hero;
+	CS230::InputKey modeNext;
+	CS230::InputKey modeReload;
 };

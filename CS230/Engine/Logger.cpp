@@ -7,7 +7,7 @@ Project: CS230
 Author: Juseung Yang
 Creation date: 3/14/2022
 -----------------------------------------------------------------*/
-#include <iostream>    // cout.rdbuf
+#include <iostream>    
 #include "Logger.h"
 
 CS230::Logger::Logger(Logger::Severity severity, bool useConsole, std::chrono::system_clock::time_point startTime)
@@ -55,6 +55,5 @@ void CS230::Logger::Log(CS230::Logger::Severity severity, std::string message)
 
 double CS230::Logger::GetSecondsSinceStart()
 {
-	//return std::chrono::time_point( std::chrono::system_clock::now() - startTime);
 	return std::chrono::duration<double>( std::chrono::system_clock::now() - startTime).count();
 }

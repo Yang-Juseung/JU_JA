@@ -8,7 +8,7 @@ Project: CS230
 Author: Juseung Yang
 Creation date: 3/15/2022
 -----------------------------------------------------------------*/
-#include "../Engine/Engine.h"	//GetGameStateManager
+#include "../Engine/Engine.h"	
 #include "Screens.h"
 #include "Mode2.h"
 
@@ -28,7 +28,7 @@ void Mode2::Update(double dt)
 	ship->Update(dt);
 
 	if (modeNext.IsKeyReleased()) {
-		Engine::GetGameStateManager().Shutdown();
+		Engine::GetGameStateManager().SetNextState(static_cast<int>(Screens::Mode3));
 	}
 
 	if (modeReload.IsKeyReleased())

@@ -36,12 +36,6 @@ math::TransformMatrix CS230::Camera::GetMatrix()
     return math::TranslateMatrix(-position);
 }
 
-//Update
-//Todo : Update the camera position
-//Check if the camera / screen position of the follow object is outside of movableRange
-//Move the camera to the correct position
-//If the camera is outside of the extent which its allowed to go, move it back so the position is valid
-
 void CS230::Camera::Update(const math::vec2& followObjPos)
 {
     if (followObjPos.x <= movableRange.bottomLeft.x+ position.x)

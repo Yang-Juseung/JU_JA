@@ -16,15 +16,15 @@ Creation date: 6/13/2022
 Mode3::Mode3()
 	: modeNext(CS230::InputKey::Keyboard::Enter),
 	modeReload(CS230::InputKey::Keyboard::R),
-	hero(nullptr),
+	player(nullptr),
 	camera(math::rect2{ math::vec2(Engine::GetWindow().GetSize().x * 0.15,0), math::vec2(Engine::GetWindow().GetSize().x * 0.35, 0) })
 {
 }
 
 void Mode3::Load()
 {
-	hero = new Hero(math::vec2(150, Mode3::floor), camera);
-	hero->Load();
+	player = new Player(math::vec2(150, Mode3::floor), camera);
+	player->Load();
 
 	background.Add("assets/Mountains.png", 2);
 	background.Add("assets/foreground.png", 1);
@@ -34,7 +34,7 @@ void Mode3::Load()
 }
 void Mode3::Update(double dt)
 {
-	hero->Update(dt);
+	player->Update(dt);
 
 
 	if (modeNext.IsKeyReleased()) 
@@ -47,11 +47,11 @@ void Mode3::Update(double dt)
 		Engine::GetGameStateManager().ReloadState();
 	}
 
-	camera.Update(hero->GetPosition());
+	camera.Update(player->GetPosition());
 }
 void Mode3::Unload()
 {
-	delete hero;
+	delete player;
 }
 
 void Mode3::Draw()
@@ -60,6 +60,6 @@ void Mode3::Draw()
 	background.Draw(camera);
 
 	math::TransformMatrix cameraMatrix = camera.GetMatrix();
-	hero->Draw(cameraMatrix);
+	player->Draw(cameraMatrix);
 
 }
