@@ -33,8 +33,6 @@ private:
 
     void TestForWrap();
 
-    bool isAccelerating;
-
     math::vec2 velocity;
     static constexpr double accel = 400;
     static constexpr double drag = 1.0f;

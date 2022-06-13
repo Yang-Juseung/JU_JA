@@ -7,12 +7,6 @@
     <Filter Include="Game">
       <UniqueIdentifier>{e139d02b-c2f1-4720-a85f-2c5a1c0a29b1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="anime">
-      <UniqueIdentifier>{1da325ca-e7f8-4c3d-a88f-7249a7b76658}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="sprt">
-      <UniqueIdentifier>{6299c249-5840-4a43-85bd-39c287fd7aed}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -66,12 +60,6 @@
     </ClCompile>
     <ClCompile Include="Engine\Camera.cpp">
       <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Animation.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Mode3.cpp">
-      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -135,61 +123,10 @@
     <ClInclude Include="Engine\Rect.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Ball_Anims.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Flame_Anims.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Animation.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Hero_Anims.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Mode3.h">
-      <Filter>Game</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine\Vec2.inl">
       <Filter>Engine</Filter>
-    </None>
-    <None Include="Assets\ballSquish.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\flame.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\heroFall.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\heroIdle.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\heroJump.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\heroRun.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\heroSkid.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\none.anm">
-      <Filter>anime</Filter>
-    </None>
-    <None Include="Assets\Ball.spt">
-      <Filter>sprt</Filter>
-    </None>
-    <None Include="Assets\Flame.spt">
-      <Filter>sprt</Filter>
-    </None>
-    <None Include="Assets\Hero.spt">
-      <Filter>sprt</Filter>
-    </None>
-    <None Include="Assets\Ship.spt">
-      <Filter>sprt</Filter>
     </None>
   </ItemGroup>
 </Project>
