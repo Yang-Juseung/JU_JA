@@ -15,5 +15,6 @@ enum class Screens {
 	Splash,
 	Mode1,
 	Mode2,
-	Mode3
+	Mode3,
+	GAME_OVER
 };

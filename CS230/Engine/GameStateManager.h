@@ -32,6 +32,7 @@ namespace CS230 {
 			UNLOAD,
 			SHUTDOWN,
 			EXIT,
+			DEAD
 		};
 
 		std::vector<GameState*> gameStates;

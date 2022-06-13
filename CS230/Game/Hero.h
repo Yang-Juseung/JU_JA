@@ -107,4 +107,6 @@ private:
     const CS230::Camera& camera;
 
     math::TransformMatrix objectMatrix;
+
+    double health{ 3 };
 };
