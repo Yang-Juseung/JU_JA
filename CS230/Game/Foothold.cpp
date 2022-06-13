@@ -45,25 +45,14 @@ void Foothold::Update(double dt, Player* player)
 		if (player->GetVelocity().y < 0)
 		{
 			player->SetPosition(math::vec2(player->GetPosition().x, position.y + 50));
-			//player->SetVelocity(math::vec2(player->GetVelocity().x, 0));
+			player->SetVelocity(math::vec2(player->GetVelocity().x, 0));
 		}
 		if (player->currState == &player->stateFalling)
 		{
-			player->ChangeState(&player->stateIdle);
+			player->ChangeState(&player->stateRunning);
 		}
 	}
 	
-	/*if (player->currState == &player->stateIdle&&
-		player->GetVelocity().y <= 0)
-	{
-		player->ChangeState(&player->stateFalling);
-	}*/
-
-	if (player->GetPosition().y <= Mode3::floor)
-	{
-		player->SetPosition(math::vec2(player->GetPosition().x,Mode3::floor));
-	}
-
 }
 
 void Foothold::Draw(math::TransformMatrix cameraMatrix)

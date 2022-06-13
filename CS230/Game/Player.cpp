@@ -88,7 +88,10 @@ void Player::State_Idle::Enter(Player* Player)
 	Player->sprite.PlayAnimation(static_cast<int>(Player_Anim::Player_Idle_Anim));
 }
 
-void Player::State_Idle::Update(Player*, double) {}
+void Player::State_Idle::Update(Player* Player, double)
+{
+	Player->velocity.y = 0;
+}
 
 void Player::State_Idle::TestForExit(Player* Player)
 {
@@ -104,6 +107,12 @@ void Player::State_Idle::TestForExit(Player* Player)
 	{
 		Player->ChangeState(&Player->stateJumping);
 	}
+
+	/*if (Player->position.y > Mode3::floor && 
+		Player->velocity.y < 0)
+	{
+		Player->ChangeState(&Player->stateFalling);
+	}*/
 }
 
 void Player::State_Jumping::Enter(Player* Player)
@@ -166,6 +175,10 @@ void Player::State_Running::TestForExit(Player* Player)
 	{
 		Player->ChangeState(&Player->stateJumping);
 	}
+	if (Player->GetPosition().y > Mode3::floor)
+	{
+		Player->ChangeState(&Player->stateFalling);
+	}
 }
 
 //Skidding
@@ -205,6 +218,10 @@ void Player::State_Skidding::TestForExit(Player* Player)
 	else if (!Player->moveRightKey.IsKeyDown() && !Player->moveLeftKey.IsKeyDown())
 	{
 		Player->ChangeState(&Player->stateRunning);
+	}
+	if (Player->GetPosition().y > Mode3::floor)
+	{
+		Player->ChangeState(&Player->stateFalling);
 	}
 }
 

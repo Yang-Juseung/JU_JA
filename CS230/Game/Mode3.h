@@ -47,6 +47,11 @@ private:
 	Foothold* foothold3;
 	Foothold* foothold4;
 	Foothold* foothold5;
+	Foothold* foothold6;
+	Foothold* foothold7;
+	Foothold* foothold8;
+	Foothold* foothold9;
+	Foothold* foothold10;
 	CS230::Camera camera;
 	Background background;
 };
