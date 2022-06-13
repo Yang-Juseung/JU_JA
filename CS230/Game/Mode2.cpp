@@ -28,7 +28,7 @@ void Mode2::Update(double dt)
 	ship->Update(dt);
 
 	if (modeNext.IsKeyReleased()) {
-		Engine::GetGameStateManager().Shutdown();
+		Engine::GetGameStateManager().SetNextState(static_cast<int>(Screens::Mode3));
 	}
 
 	if (modeReload.IsKeyReleased())

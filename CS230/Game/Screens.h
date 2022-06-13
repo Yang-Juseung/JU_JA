@@ -14,5 +14,6 @@ Creation date: 3/15/2022
 enum class Screens {
 	Splash,
 	Mode1,
-	Mode2
+	Mode2,
+	Mode3
 };

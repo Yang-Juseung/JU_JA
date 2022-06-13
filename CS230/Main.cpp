@@ -14,6 +14,7 @@ Creation date: 3/15/2022
 #include "Game/Splash.h"
 #include "Game/Mode1.h"
 #include "Game/Mode2.h"
+#include "Game/Mode3.h"
 #include "Game/Screens.h"
 
 
@@ -26,10 +27,12 @@ int main(void)
 		Splash splash;
 		Mode1 mode1;
 		Mode2 mode2;
+		Mode3 mode3;
 
 		engine.GetGameStateManager().AddGameState(splash);
 		engine.GetGameStateManager().AddGameState(mode1);
 		engine.GetGameStateManager().AddGameState(mode2);
+		engine.GetGameStateManager().AddGameState(mode3);
 
 		while (engine.HasGameEnded() == false) 
 		{
