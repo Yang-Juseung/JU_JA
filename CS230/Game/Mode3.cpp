@@ -51,11 +51,11 @@ void Mode3::Update(double dt)
 {
 	player->Update(dt);
 
-	foothold1->Update(dt, hero);
-	foothold2->Update(dt, hero);
-	foothold3->Update(dt, hero);
-	foothold4->Update(dt, hero);
-	foothold5->Update(dt, hero);
+	foothold1->Update(dt, player);
+	foothold2->Update(dt, player);
+	foothold3->Update(dt, player);
+	foothold4->Update(dt, player);
+	foothold5->Update(dt, player);
 
 	if (modeNext.IsKeyReleased()) 
 	{

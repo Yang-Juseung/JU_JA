@@ -25,9 +25,6 @@ public:
     void Update(double dt);
     void Draw(math::TransformMatrix cameraMatrix);
     math::vec2 GetPosition();
-    math::vec2 GetVelocity();
-    void SetPosition(math::vec2 targetPosition);
-    void SetVelocity(math::vec2 targetVelocity);
 
     class State
     {
@@ -89,10 +86,10 @@ public:
     State_Falling stateFalling;
 
 private:
-    
+
 
     void UpdateXVelocity(double dt);     //Change X velocity stuff
-    
+
 
     CS230::Sprite sprite;
     math::vec2 startPos;

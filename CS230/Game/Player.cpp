@@ -301,3 +301,18 @@ void Player::UpdateXVelocity(double dt)
 
 	}
 }
+
+void Player::SetPosition(math::vec2 targetPosition)
+{
+	position = targetPosition;
+}
+
+void Player::SetVelocity(math::vec2 targetVelocity)
+{
+	velocity = targetVelocity;
+}
+
+math::vec2 Player::GetVelocity()
+{
+	return velocity;
+}

@@ -304,17 +304,3 @@ void Hero::UpdateXVelocity(double dt)
 	}
 }
 
-void Hero::SetPosition(math::vec2 targetPosition)
-{
-	position = targetPosition;
-}
-
-void Hero::SetVelocity(math::vec2 targetVelocity)
-{
-	velocity = targetVelocity;
-}
-
-math::vec2 Hero::GetVelocity()
-{
-	return velocity;
-}

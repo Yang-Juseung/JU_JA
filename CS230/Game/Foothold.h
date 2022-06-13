@@ -11,7 +11,7 @@ Creation date: 6/13/2022
 #include "..\Engine\Sprite.h"
 #include "..\Engine\Vec2.h"
 #include "..\Engine\TransformMatrix.h"
-#include "Hero.h"
+#include "Player.h"
 
 namespace CS230
 {
@@ -22,7 +22,7 @@ class Foothold {
 public:
     Foothold(math::vec2 startPos);
     void Load();
-    void Update(double dt, Hero* hero);
+    void Update(double dt, Player* player);
     void Draw(math::TransformMatrix cameraMatrix);
     math::vec2 GetPosition();
 private:

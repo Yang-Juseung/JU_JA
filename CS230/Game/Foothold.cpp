@@ -28,7 +28,7 @@ void Foothold::Load()
 	//currState->Enter(this);
 }
 
-void Foothold::Update(double dt, Hero* hero)
+void Foothold::Update(double dt, Player* player)
 {
 	//currState->Update(this, dt);
 	sprite.Update(dt);
@@ -37,31 +37,31 @@ void Foothold::Update(double dt, Hero* hero)
 
 	objectMatrix = math::TranslateMatrix(position);
 	
-	if (hero->GetPosition().y <= position.y + 50 &&
-		hero->GetPosition().y >= position.y &&
-		hero->GetPosition().x > position.x - 50 &&
-		hero->GetPosition().x < position.x + 50  )
+	if (player->GetPosition().y <= position.y + 50 &&
+		player->GetPosition().y >= position.y &&
+		player->GetPosition().x > position.x - 50 &&
+		player->GetPosition().x < position.x + 50  )
 	{
-		if (hero->GetVelocity().y < 0)
+		if (player->GetVelocity().y < 0)
 		{
-			hero->SetPosition(math::vec2(hero->GetPosition().x, position.y + 50));
-			//hero->SetVelocity(math::vec2(hero->GetVelocity().x, 0));
+			player->SetPosition(math::vec2(player->GetPosition().x, position.y + 50));
+			//player->SetVelocity(math::vec2(player->GetVelocity().x, 0));
 		}
-		if (hero->currState == &hero->stateFalling)
+		if (player->currState == &player->stateFalling)
 		{
-			hero->ChangeState(&hero->stateIdle);
+			player->ChangeState(&player->stateIdle);
 		}
 	}
 	
-	/*if (hero->currState == &hero->stateIdle&&
-		hero->GetVelocity().y <= 0)
+	/*if (player->currState == &player->stateIdle&&
+		player->GetVelocity().y <= 0)
 	{
-		hero->ChangeState(&hero->stateFalling);
+		player->ChangeState(&player->stateFalling);
 	}*/
 
-	if (hero->GetPosition().y <= Mode3::floor)
+	if (player->GetPosition().y <= Mode3::floor)
 	{
-		hero->SetPosition(math::vec2(hero->GetPosition().x,Mode3::floor));
+		player->SetPosition(math::vec2(player->GetPosition().x,Mode3::floor));
 	}
 
 }
