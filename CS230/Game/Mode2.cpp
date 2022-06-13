@@ -8,7 +8,7 @@ Project: CS230
 Author: Juseung Yang
 Creation date: 3/15/2022
 -----------------------------------------------------------------*/
-#include "../Engine/Engine.h"	//GetGameStateManager
+#include "../Engine/Engine.h"	
 #include "Screens.h"
 #include "Mode2.h"
 

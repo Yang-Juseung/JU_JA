@@ -12,21 +12,38 @@ Creation date: 3/24/2022
 #include "Vec2.h"
 #include "Texture.h"
 #include "TransformMatrix.h"
+#include "Animation.h"
+
+namespace math
+{
+    class TransformMatrix;
+}
 
 namespace CS230 {
     class Sprite {
     public:
         Sprite();
-        void Load(const std::filesystem::path& texturePath);
-        void Load(const std::filesystem::path& texturePath, math::ivec2 hotSpotPosition);
+        ~Sprite();
+        void Load(const std::filesystem::path& spriteInfoFile);
         void Draw(math::TransformMatrix displayMatrix);
-        math::ivec2 GetTextureSize();
 
-        void Load(const std::filesystem::path& texturePath, std::initializer_list<math::ivec2> hotspots);
+        void PlayAnimation(int anim);
+        void Update(double dt);
+        bool IsAnimationDone();
+
         math::ivec2 GetHotSpot(int index);
+        math::ivec2 GetFrameSize() const;
 
     private:
+        math::ivec2 GetFrameTexel(int frameNum) const;
+
         Texture texture;
+
+        int currAnim;
+        std::vector<Animation*> animations;
+
+        math::ivec2 frameSize;
+        std::vector<math::ivec2> frameTexel;
         std::vector<math::ivec2> hotSpotList;
     };
 }

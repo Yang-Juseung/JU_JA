@@ -7,11 +7,12 @@ Project: CS230
 Author: Juseung Yang
 Creation date: 3/24/2021
 -----------------------------------------------------------------*/
-#include "../Engine/Engine.h"	//GetGameStateManager
+#include "../Engine/Engine.h"	
 #include "Screens.h"
 #include "Splash.h"
+#include "..\Engine\TransformMatrix.h"
 
-Splash::Splash() /*: modeNext(CS230::InputKey::Keyboard::Enter) */{}
+Splash::Splash() {}
 
 void Splash::Load() 
 {

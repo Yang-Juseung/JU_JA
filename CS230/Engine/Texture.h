@@ -11,7 +11,11 @@ Creation date: 3/24/2022
 #pragma once
 #include <doodle/image.hpp>    //doodle::Image
 #include "Vec2.h"
-#include "TransformMatrix.h"
+
+namespace math 
+{
+    class TransformMatrix;
+}
 
 namespace CS230 {
     class Texture {
@@ -20,6 +24,7 @@ namespace CS230 {
         Texture(const std::filesystem::path& filePath);
         void Load(const std::filesystem::path& filePath);
         void Draw(math::TransformMatrix displayMatrix);
+        void Draw(math::TransformMatrix displayMatrix, math::ivec2 texelPos, math::ivec2 frameSize);
         math::ivec2 GetSize();
     private:
         doodle::Image image;

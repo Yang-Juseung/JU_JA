@@ -40,9 +40,6 @@ namespace CS230
 		std::chrono::system_clock::time_point startTime;
 		Severity minLevel;
 
-	//Todo: Create a private function(a helper function) called GetSecondsSinceStart.
-	//This should return the time between now(when it's being called) and startTime.  
-	//(see Engine.cpp above this if you need help figuring out how to do this).
 		double GetSecondsSinceStart();
 	};
 }

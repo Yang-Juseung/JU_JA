@@ -10,7 +10,7 @@ Creation date: 3/15/2022
 -----------------------------------------------------------------*/
 #include <doodle/input.hpp>	
 #include "Input.h"
-#include "Engine.h"			// GetLogger, GetInput
+#include "Engine.h"			
 
 CS230::InputKey::Keyboard DoodleKeyToCS230Key(doodle::KeyboardButtons button) {
 	if (button == doodle::KeyboardButtons::Enter) {
