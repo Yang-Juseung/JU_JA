@@ -55,10 +55,27 @@ private:
 	Foothold* foothold8;
 	Foothold* foothold9;
 	Foothold* foothold10;
+	Foothold* foothold11;
+	Foothold* foothold12;
+	Foothold* foothold13;
+	Foothold* foothold14;
+	Foothold* foothold15;
+	Foothold* foothold16;
+	Foothold* foothold17;
+	Foothold* foothold18;
+	Foothold* foothold19;
+	Foothold* foothold20;
+	Foothold* foothold21;
+	Foothold* foothold22;
+	Foothold* foothold23;
 
 	Coin* coin1;
 	Coin* coin2;
 	Coin* coin3;
+	Coin* coin4;
+	Coin* coin5;
+	Coin* coin6;
+
 
 	CS230::Camera camera;
 	Background background;

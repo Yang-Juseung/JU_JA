@@ -11,11 +11,11 @@ Creation date: 6/13/2022
 #include "Mode3.h"
 #include "..\Engine\Engine.h"
 #include "Ball_Anims.h"
+#include <doodle/drawing.hpp>
 
 Coin::Coin(math::vec2 startPos)
 	: initPosition(startPos),
-	position(position),
-	isCollided(false)
+	position(position)
 {
 }
 
@@ -37,6 +37,7 @@ void Coin::Update(double dt, Player* player)
 		player->GetPosition().x < position.x +  50)
 	{
 		isCollided = true;
+		coins++;
 	}
 }
 

@@ -26,6 +26,7 @@ public:
     void Draw(math::TransformMatrix cameraMatrix);
     math::vec2 GetPosition();
     bool isCollided;
+    int coins = 0;
 private:
     
 
