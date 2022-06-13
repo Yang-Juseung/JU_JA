@@ -1,0 +1,22 @@
+﻿  Camera.cpp
+  Engine.cpp
+  GameStateManager.cpp
+  Input.cpp
+  Input_Doodle.cpp
+  Logger.cpp
+  Sprite.cpp
+  Texture.cpp
+  TransformMatrix.cpp
+  Window.cpp
+  Background.cpp
+  Ball.cpp
+  Hero.cpp
+  Mode1.cpp
+  Mode2.cpp
+  Ship.cpp
+  Splash.cpp
+  Main.cpp
+  코드를 생성하고 있습니다...
+     C:\Users\USER\Downloads\CS230-JuseungYang-Week-6\x64\Debug\CS230.lib 라이브러리 및 C:\Users\USER\Downloads\CS230-JuseungYang-Week-6\x64\Debug\CS230.exp 개체를 생성하고 있습니다.
+  CS230.vcxproj -> C:\Users\USER\Downloads\CS230-JuseungYang-Week-6\x64\Debug\CS230.exe
+  0개 파일이 복사되었습니다.
