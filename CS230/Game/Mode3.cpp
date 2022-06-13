@@ -270,4 +270,8 @@ void Mode3::Draw()
 	{
 		doodle::draw_text("You collected all the coins!! You Win!!", 60, 60);
 	}
+	else if (coin6->isCollided == true)
+	{
+		doodle::draw_text("You should collect all the coins!! Try again!!", 60, 60);
+	}
 }
