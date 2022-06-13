@@ -9,8 +9,8 @@ Creation date: 3/24/2022
 -----------------------------------------------------------------*/
 #include <doodle/window.hpp>
 #include "Window.h"
-#include <doodle/drawing.hpp>     
-#include "Engine.h"			
+#include <doodle/drawing.hpp>     // set_frame_of_reference, clear_background
+#include "Engine.h"			// GetWindow
 
 void CS230::Window::Init(std::string windowName) 
 {
@@ -25,6 +25,8 @@ void on_window_resized(int new_width, int new_height)
 {
     Engine::GetLogger().LogEvent("Window Resized");
 
+    /*CS230::Window *window;
+    window->Resize(static_cast<int>(Engine::GetWindow()), static_cast<int>(Engine::GetWindow()));*/
     Engine::GetWindow().Resize(new_width,new_height);
 
 }

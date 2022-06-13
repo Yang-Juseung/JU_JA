@@ -42,7 +42,7 @@ private:
     CS230::Input input;
     CS230::Window window;
 
-    static constexpr double Target_FPS = 60.0;
+    static constexpr double Target_FPS = 30.0;
     static constexpr int FPS_IntervalSec = 5;
     static constexpr int FPS_IntervalFrameCount = static_cast<int>(FPS_IntervalSec * Target_FPS);
 };

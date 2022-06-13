@@ -167,7 +167,6 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Engine\Animation.cpp" />
     <ClCompile Include="Engine\Camera.cpp" />
     <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="Engine\GameStateManager.cpp" />
@@ -183,13 +182,11 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClCompile Include="Game\Hero.cpp" />
     <ClCompile Include="Game\Mode1.cpp" />
     <ClCompile Include="Game\Mode2.cpp" />
-    <ClCompile Include="Game\Mode3.cpp" />
     <ClCompile Include="Game\Ship.cpp" />
     <ClCompile Include="Game\Splash.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Animation.h" />
     <ClInclude Include="Engine\Camera.h" />
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Engine\GameState.h" />
@@ -204,30 +201,14 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClInclude Include="Engine\Window.h" />
     <ClInclude Include="Game\Background.h" />
     <ClInclude Include="Game\Ball.h" />
-    <ClInclude Include="Game\Ball_Anims.h" />
-    <ClInclude Include="Game\Flame_Anims.h" />
     <ClInclude Include="Game\Hero.h" />
-    <ClInclude Include="Game\Hero_Anims.h" />
     <ClInclude Include="Game\Mode1.h" />
     <ClInclude Include="Game\Mode2.h" />
-    <ClInclude Include="Game\Mode3.h" />
     <ClInclude Include="Game\Screens.h" />
     <ClInclude Include="Game\Ship.h" />
     <ClInclude Include="Game\Splash.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Ball.spt" />
-    <None Include="Assets\ballSquish.anm" />
-    <None Include="Assets\flame.anm" />
-    <None Include="Assets\Flame.spt" />
-    <None Include="Assets\Hero.spt" />
-    <None Include="Assets\heroFall.anm" />
-    <None Include="Assets\heroIdle.anm" />
-    <None Include="Assets\heroJump.anm" />
-    <None Include="Assets\heroRun.anm" />
-    <None Include="Assets\heroSkid.anm" />
-    <None Include="Assets\none.anm" />
-    <None Include="Assets\Ship.spt" />
     <None Include="Engine\Vec2.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

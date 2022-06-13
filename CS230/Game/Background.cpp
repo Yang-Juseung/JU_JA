@@ -1,5 +1,3 @@
-//Juseung Yang
-
 #include "Background.h"
 #include "..\Engine\Camera.h"
 #include "..\Engine\TransformMatrix.h"
