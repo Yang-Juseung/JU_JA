@@ -20,7 +20,8 @@ CS230::Texture::Texture(const std::filesystem::path& filePath)
 } 
 
 
-void CS230::Texture::Load(const std::filesystem::path& filePath) {
+void CS230::Texture::Load(const std::filesystem::path& filePath) 
+{
 	image = doodle::Image{ filePath };
 }
 

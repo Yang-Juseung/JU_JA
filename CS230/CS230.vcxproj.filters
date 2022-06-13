@@ -73,6 +73,9 @@
     <ClCompile Include="Game\Mode3.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Foothold.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\GameState.h">
@@ -148,6 +151,9 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\Mode3.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Foothold.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

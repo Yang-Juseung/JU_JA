@@ -57,4 +57,24 @@ void CS230::Camera::Update(const math::vec2& followObjPos)
     {
         position.x = extent.bottomLeft.x;
     }
+
+    if (followObjPos.y <= movableRange.bottomLeft.y + position.y)
+    {
+        position.y = followObjPos.y - movableRange.bottomLeft.y;
+    }
+
+    if (followObjPos.y >= movableRange.topRight.y + position.y)
+    {
+        position.y = followObjPos.y - movableRange.topRight.y;
+    }
+
+    if (position.y >= extent.topRight.y)
+    {
+        position.y = extent.topRight.y;
+    }
+
+    if (position.y <= extent.bottomLeft.y)
+    {
+        position.y = extent.bottomLeft.y;
+    }
 }

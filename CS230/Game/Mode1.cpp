@@ -20,7 +20,7 @@ Mode1::Mode1()
 	ball1(new Ball(math::vec2(600, Mode1::floor))),
 	ball2(new Ball(math::vec2(2700, Mode1::floor))),
 	ball3(new Ball(math::vec2(4800, Mode1::floor))),
-	camera(math::rect2{ math::vec2(Engine::GetWindow().GetSize().x * 0.15,0), math::vec2(Engine::GetWindow().GetSize().x * 0.35, 0) })
+	camera(math::rect2{ math::vec2(Engine::GetWindow().GetSize().x * 0.15,0), math::vec2(Engine::GetWindow().GetSize().x * 0.35, Engine::GetWindow().GetSize().y) })
 {
 }
 
