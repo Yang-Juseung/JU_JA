@@ -12,7 +12,7 @@ Creation date: 3/24/2022
 #include "Animation.h"
 #include "Engine.h" 
 
-CS230::Sprite::Sprite() {}
+CS230::Sprite::Sprite():currAnim(0) {}
 
 CS230::Sprite::~Sprite() {
 	for (Animation* anim : animations) {

@@ -15,6 +15,7 @@ Creation date: 6/13/2022
 #include "..\Engine\Camera.h"
 #include "Background.h"
 #include "Foothold.h"
+#include "Coin.h"
 
 namespace CS230
 {
@@ -35,6 +36,8 @@ public:
 
 	static constexpr double gravity = 2000;
 
+	int score;
+
 private:
 	CS230::InputKey modeNext;
 
@@ -52,6 +55,11 @@ private:
 	Foothold* foothold8;
 	Foothold* foothold9;
 	Foothold* foothold10;
+
+	Coin* coin1;
+	Coin* coin2;
+	Coin* coin3;
+
 	CS230::Camera camera;
 	Background background;
 };

@@ -1,0 +1,5 @@
+assets/paddle.png
+FrameSize 128 48
+HotSpot 64 0
+NumFrames 1
+Anim assets/none.anm

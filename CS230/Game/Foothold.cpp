@@ -10,7 +10,7 @@ Creation date: 6/13/2022
 #include "Foothold.h"
 #include "Mode3.h"
 #include "..\Engine\Engine.h"
-#include "Ball_Anims.h"
+#include "Paddle_Anims.h"
 
 Foothold::Foothold(math::vec2 startPos)
 	: initPosition(startPos),
@@ -21,7 +21,7 @@ Foothold::Foothold(math::vec2 startPos)
 
 void Foothold::Load()
 {
-	sprite.Load("assets/Ball.spt");
+	sprite.Load("assets/Paddle.spt");
 	position = initPosition;
 	//velocity = { 0,0 };
 	//currState = &stateLand;

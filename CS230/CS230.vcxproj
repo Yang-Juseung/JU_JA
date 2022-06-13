@@ -180,6 +180,7 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClCompile Include="Engine\Window.cpp" />
     <ClCompile Include="Game\Background.cpp" />
     <ClCompile Include="Game\Ball.cpp" />
+    <ClCompile Include="Game\Coin.cpp" />
     <ClCompile Include="Game\Foothold.cpp" />
     <ClCompile Include="Game\Gameover.cpp" />
     <ClCompile Include="Game\Hero.cpp" />
@@ -208,6 +209,7 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClInclude Include="Game\Background.h" />
     <ClInclude Include="Game\Ball.h" />
     <ClInclude Include="Game\Ball_Anims.h" />
+    <ClInclude Include="Game\Coin.h" />
     <ClInclude Include="Game\Flame_Anims.h" />
     <ClInclude Include="Game\Foothold.h" />
     <ClInclude Include="Game\Gameover.h" />
@@ -216,6 +218,7 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClInclude Include="Game\Mode1.h" />
     <ClInclude Include="Game\Mode2.h" />
     <ClInclude Include="Game\Mode3.h" />
+    <ClInclude Include="Game\Paddle_Anims.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Player_Anime.h" />
     <ClInclude Include="Game\Screens.h" />
@@ -225,6 +228,8 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
   <ItemGroup>
     <None Include="Assets\Ball.spt" />
     <None Include="Assets\ballSquish.anm" />
+    <None Include="Assets\Coin.anm" />
+    <None Include="Assets\Coin.spt" />
     <None Include="Assets\flame.anm" />
     <None Include="Assets\Flame.spt" />
     <None Include="Assets\Hero.spt" />
@@ -234,6 +239,8 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <None Include="Assets\heroRun.anm" />
     <None Include="Assets\heroSkid.anm" />
     <None Include="Assets\none.anm" />
+    <None Include="Assets\Paddle.anm" />
+    <None Include="Assets\Paddle.spt" />
     <None Include="Assets\Player.spt" />
     <None Include="Assets\PlayerFall.anm" />
     <None Include="Assets\PlayerJump.anm" />

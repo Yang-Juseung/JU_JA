@@ -82,6 +82,9 @@
     <ClCompile Include="Game\Player.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Coin.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\GameState.h">
@@ -171,6 +174,12 @@
     <ClInclude Include="Game\Player_Anime.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Coin.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Paddle_Anims.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine\Vec2.inl">
@@ -228,6 +237,18 @@
       <Filter>anime</Filter>
     </None>
     <None Include="Assets\PlayerIdle.anm">
+      <Filter>anime</Filter>
+    </None>
+    <None Include="Assets\Paddle.anm">
+      <Filter>anime</Filter>
+    </None>
+    <None Include="Assets\Paddle.spt">
+      <Filter>sprt</Filter>
+    </None>
+    <None Include="Assets\Coin.spt">
+      <Filter>sprt</Filter>
+    </None>
+    <None Include="Assets\Coin.anm">
       <Filter>anime</Filter>
     </None>
   </ItemGroup>

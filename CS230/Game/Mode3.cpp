@@ -11,23 +11,28 @@ Creation date: 6/13/2022
 #include "../Engine/Engine.h"	//GetGameStateManager
 #include "Screens.h"
 #include "Mode3.h"
+#include <doodle/drawing.hpp>
 
 
 Mode3::Mode3()
 	: modeNext(CS230::InputKey::Keyboard::Enter),
 	modeReload(CS230::InputKey::Keyboard::R),
 	player(nullptr),
-	  foothold1(new Foothold(math::vec2(600, 200))),
-	  foothold2(new Foothold(math::vec2(400, 400))),
-	  foothold3(new Foothold(math::vec2(200, 600))),
-	  foothold4(new Foothold(math::vec2(600, 700))),
-	  foothold5(new Foothold(math::vec2(100, 800))),
-	  foothold6(new Foothold(math::vec2(800, 900))),
-	  foothold7(new Foothold(math::vec2(900, 1100))),
-	  foothold8(new Foothold(math::vec2(1100, 1100))),
-	  foothold9(new Foothold(math::vec2(700, 1300))),
-	  foothold10(new Foothold(math::vec2(400, 1400))),
-	  camera(math::rect2{ math::vec2(0,Engine::GetWindow().GetSize().y * 0.2), math::vec2(Engine::GetWindow().GetSize().x, Engine::GetWindow().GetSize().y * 0.35) })
+	foothold1(new Foothold(math::vec2(600, 200))),
+	foothold2(new Foothold(math::vec2(400, 400))),
+	foothold3(new Foothold(math::vec2(200, 600))),
+	foothold4(new Foothold(math::vec2(600, 700))),
+	foothold5(new Foothold(math::vec2(100, 800))),
+	foothold6(new Foothold(math::vec2(800, 900))),
+	foothold7(new Foothold(math::vec2(900, 1100))),
+	foothold8(new Foothold(math::vec2(1100, 1100))),
+	foothold9(new Foothold(math::vec2(700, 1300))),
+	foothold10(new Foothold(math::vec2(400, 1400))),
+	camera(math::rect2{ math::vec2(0,Engine::GetWindow().GetSize().y * 0.2), math::vec2(Engine::GetWindow().GetSize().x, Engine::GetWindow().GetSize().y * 0.35) }),
+	score(0),
+	coin1(new Coin(math::vec2(200, 650))),
+	coin2(new Coin(math::vec2(400, 1450))),
+	coin3(new Coin(math::vec2(700, 1100)))
 {
 }
 
@@ -45,6 +50,9 @@ void Mode3::Load()
 	foothold8 = new Foothold(math::vec2(1100, 1100));
 	foothold9 = new Foothold(math::vec2(700, 1300));
 	foothold10 = new Foothold(math::vec2(400, 1400));
+	coin1 = new Coin(math::vec2(200, 650));
+	coin2 = new Coin(math::vec2(400, 1450));
+	coin3 = new Coin(math::vec2(700, 1100));
 	foothold1->Load();
 	foothold2->Load();
 	foothold3->Load();
@@ -55,6 +63,9 @@ void Mode3::Load()
 	foothold8->Load();
 	foothold9->Load();
 	foothold10->Load();
+	coin1->Load();
+	coin2->Load();
+	coin3->Load();
 
 	background.Add("assets/Mountains.png", 2);
 	background.Add("assets/foreground.png", 1);
@@ -77,6 +88,10 @@ void Mode3::Update(double dt)
 	foothold9->Update(dt, player);
 	foothold10->Update(dt, player);
 
+	coin1->Update(dt,player);
+	coin2->Update(dt, player);
+	coin3->Update(dt, player);
+
 	if (modeNext.IsKeyReleased()) 
 	{
 		Engine::GetGameStateManager().SetNextState(static_cast<int>(Screens::Mode3));
@@ -86,6 +101,8 @@ void Mode3::Update(double dt)
 	{
 		Engine::GetGameStateManager().ReloadState();
 	}
+
+	score = coin1->isCollided + coin2->isCollided + coin3->isCollided;
 
 	camera.Update(player->GetPosition());
 }
@@ -102,6 +119,10 @@ void Mode3::Unload()
 	delete foothold8;
 	delete foothold9;
 	delete foothold10;
+	delete coin1;
+	delete coin2;
+	delete coin3;
+	score = 0;
 }
 
 void Mode3::Draw()
@@ -121,4 +142,21 @@ void Mode3::Draw()
 	foothold9->Draw(cameraMatrix);
 	foothold10->Draw(cameraMatrix);
 	player->Draw(cameraMatrix);
+
+	if (coin1->isCollided != true)
+	{
+		coin1->Draw(cameraMatrix);
+	}
+	
+	if (coin2->isCollided != true)
+	{
+		coin2->Draw(cameraMatrix);
+	}
+
+	if (coin3->isCollided != true)
+	{
+		coin3->Draw(cameraMatrix);
+	}
+
+	doodle::draw_text("Score : "+std::to_string(score),10,10 );
 }

@@ -24,7 +24,7 @@ int main(void)
 	try 
 	{
 		Engine& engine = Engine::Instance();
-		engine.Init("Week 6 - Juseung Yang");
+		engine.Init("CS230 Final Project - Juseung Yang & Jaeyeong An");
 		Splash splash;
 		Mode1 mode1;
 		Mode2 mode2;
