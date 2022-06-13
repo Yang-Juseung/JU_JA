@@ -14,6 +14,7 @@ Creation date: 6/13/2022
 #include "Player.h"
 #include "..\Engine\Camera.h"
 #include "Background.h"
+#include "Foothold.h"
 
 namespace CS230
 {
@@ -41,6 +42,11 @@ private:
 
 	Player* player;
 
+	Foothold* foothold1;
+	Foothold* foothold2;
+	Foothold* foothold3;
+	Foothold* foothold4;
+	Foothold* foothold5;
 	CS230::Camera camera;
 	Background background;
 };

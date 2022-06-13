@@ -13,6 +13,7 @@ Creation date: 3/26/2022
 #include "Mode1.h"
 #include "Hero.h"
 #include "Hero_Anims.h"
+#include "Foothold.h"
 
 Hero::Hero(math::vec2 startPos, const CS230::Camera& camera)
 	: moveLeftKey(CS230::InputKey::Keyboard::Left),
@@ -43,7 +44,6 @@ void Hero::Update(double dt)
 	sprite.Update(dt);
 	position += velocity * dt;
 	currState->TestForExit(this);
-	
 
 	if ( position.x > camera.GetPosition().x + Engine::GetWindow().GetSize().x - (sprite.GetFrameSize().x / 2))
 	{
@@ -63,6 +63,7 @@ void Hero::Update(double dt)
 	{
 		objectMatrix *= math::ScaleMatrix(math::vec2(-1.0, 1.0) );
 	}
+
 }
 
 void Hero::Draw(math::TransformMatrix cameraMatrix)
@@ -104,6 +105,7 @@ void Hero::State_Idle::TestForExit(Hero* hero)
 	{
 		hero->ChangeState(&hero->stateJumping);
 	}
+
 }
 
 void Hero::State_Jumping::Enter(Hero* hero) 
@@ -302,3 +304,17 @@ void Hero::UpdateXVelocity(double dt)
 	}
 }
 
+void Hero::SetPosition(math::vec2 targetPosition)
+{
+	position = targetPosition;
+}
+
+void Hero::SetVelocity(math::vec2 targetVelocity)
+{
+	velocity = targetVelocity;
+}
+
+math::vec2 Hero::GetVelocity()
+{
+	return velocity;
+}
