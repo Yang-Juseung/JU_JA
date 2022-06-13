@@ -180,10 +180,12 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClCompile Include="Engine\Window.cpp" />
     <ClCompile Include="Game\Background.cpp" />
     <ClCompile Include="Game\Ball.cpp" />
+    <ClCompile Include="Game\Gameover.cpp" />
     <ClCompile Include="Game\Hero.cpp" />
     <ClCompile Include="Game\Mode1.cpp" />
     <ClCompile Include="Game\Mode2.cpp" />
     <ClCompile Include="Game\Mode3.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Ship.cpp" />
     <ClCompile Include="Game\Splash.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -206,11 +208,14 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <ClInclude Include="Game\Ball.h" />
     <ClInclude Include="Game\Ball_Anims.h" />
     <ClInclude Include="Game\Flame_Anims.h" />
+    <ClInclude Include="Game\Gameover.h" />
     <ClInclude Include="Game\Hero.h" />
     <ClInclude Include="Game\Hero_Anims.h" />
     <ClInclude Include="Game\Mode1.h" />
     <ClInclude Include="Game\Mode2.h" />
     <ClInclude Include="Game\Mode3.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\Player_Anime.h" />
     <ClInclude Include="Game\Screens.h" />
     <ClInclude Include="Game\Ship.h" />
     <ClInclude Include="Game\Splash.h" />
@@ -227,6 +232,12 @@ xcopy /d /y Assets\* "$(OutputPath)Assets"
     <None Include="Assets\heroRun.anm" />
     <None Include="Assets\heroSkid.anm" />
     <None Include="Assets\none.anm" />
+    <None Include="Assets\Player.spt" />
+    <None Include="Assets\PlayerFall.anm" />
+    <None Include="Assets\PlayerJump.anm" />
+    <None Include="Assets\PlayerIdle.anm" />
+    <None Include="Assets\PlayerRun.anm" />
+    <None Include="Assets\PlayerSkid.anm" />
     <None Include="Assets\Ship.spt" />
     <None Include="Engine\Vec2.inl" />
   </ItemGroup>
