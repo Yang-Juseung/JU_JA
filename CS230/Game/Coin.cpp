@@ -14,7 +14,8 @@ Creation date: 6/13/2022
 
 Coin::Coin(math::vec2 startPos)
 	: initPosition(startPos),
-	position(position)
+	position(position),
+	isCollided(false)
 {
 }
 
