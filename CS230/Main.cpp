@@ -7,8 +7,8 @@ Project: CS230
 Author: Juseung Yang
 Creation date: 3/15/2022
 -----------------------------------------------------------------*/
-#include <stdexcept>	//std::exception
-#include <iostream>		//std::cerr
+#include <stdexcept>	
+#include <iostream>		
 
 #include "Engine/Engine.h"
 #include "Game/Splash.h"
